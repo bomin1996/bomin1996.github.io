@@ -388,6 +388,8 @@ ul { list-style: none; }
     margin-bottom: 24px;
 }
 
+.project-features.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+
 .feature {
     display: flex; gap: 12px; align-items: flex-start;
 }
