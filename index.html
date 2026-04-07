@@ -302,6 +302,60 @@
                 </div>
 
                 <div class="project-card">
+                    <h3 class="project-name">Commerce API</h3>
+                    <p class="project-desc">
+                        동시성 제어와 멱등성을 고려한 커머스 백엔드 API.
+                        단순 CRUD를 넘어, 실제 서비스에서 발생하는 재고 race condition과
+                        중복 결제 문제를 어떻게 해결하는지에 초점을 맞춘 프로젝트.
+                    </p>
+                    <div class="project-features">
+                        <div class="feature">
+                            <span class="feature-icon">&#128274;</span>
+                            <div>
+                                <strong>낙관적 락</strong>
+                                <p>version 컬럼 기반 재고 동시성 제어로 overselling 방지</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">&#128176;</span>
+                            <div>
+                                <strong>결제 멱등성</strong>
+                                <p>idempotency_key + Redis 분산 락으로 이중 결제 방지</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">&#9851;</span>
+                            <div>
+                                <strong>트랜잭션</strong>
+                                <p>재고 차감 + 주문 생성을 원자적으로 처리</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">&#9889;</span>
+                            <div>
+                                <strong>테스트 자동화</strong>
+                                <p>Jest + Supertest 통합 테스트, GitHub Actions CI</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span>TypeScript</span>
+                        <span>Express</span>
+                        <span>MySQL</span>
+                        <span>Redis</span>
+                        <span>Docker</span>
+                        <span>Swagger</span>
+                        <span>Jest</span>
+                        <span>GitHub Actions</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/bomin1996/commerce-api" class="btn btn-sm" target="_blank" rel="noopener">
+                            GitHub Repository
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
                     <h3 class="project-name">공공기관 사이니지 관리 시스템</h3>
                     <p class="project-desc">
                         공공기관용 사이니지 및 버스 쉘터의 실시간 데이터 수집,
@@ -309,6 +363,36 @@
                         다양한 지자체의 요구사항에 맞춘 유연한 API와
                         대규모 데이터 처리 파이프라인을 구축.
                     </p>
+                    <div class="project-features">
+                        <div class="feature">
+                            <span class="feature-icon">&#128225;</span>
+                            <div>
+                                <strong>실시간 데이터</strong>
+                                <p>셸터 35대 비동기 메시지 처리, 타임아웃 4.5%→0.8%</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">&#128202;</span>
+                            <div>
+                                <strong>DB 최적화</strong>
+                                <p>쿼리 120→40ms, DB CPU 70%→45% 개선</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">&#9889;</span>
+                            <div>
+                                <strong>API 성능</strong>
+                                <p>Nginx 캐시/압축으로 응답 600→280ms 개선</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">&#129302;</span>
+                            <div>
+                                <strong>AI 로그 분석</strong>
+                                <p>LLM API 연동 장애 요약/원인 추정 자동화</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="project-tech">
                         <span>Node.js</span>
                         <span>Express</span>
@@ -327,6 +411,22 @@
                         Spring Boot 기반으로 서버 아키텍처를 설계하고,
                         RESTful API, 인증/인가, 네트워킹 프로토콜을 학습하며 구현.
                     </p>
+                    <div class="project-features">
+                        <div class="feature">
+                            <span class="feature-icon">&#128205;</span>
+                            <div>
+                                <strong>위치 기반 서비스</strong>
+                                <p>공연/버스킹 정보 위치 검색 플랫폼</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">&#128272;</span>
+                            <div>
+                                <strong>인증/인가</strong>
+                                <p>세션 관리, 웹 보안 기본 원칙 구현</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="project-tech">
                         <span>Spring Boot</span>
                         <span>Java</span>
@@ -342,8 +442,37 @@
                         대규모 트래픽 처리를 고려한 URL 단축 서비스.
                         단순 기능 구현을 넘어, 부하 테스트 → 병목 분석 → 성능 최적화 사이클을 경험하는 데
                         초점을 맞춘 프로젝트.
-                        Redis 캐시를 활용한 리다이렉트 최적화와 Artillery 기반 부하 테스트를 포함.
                     </p>
+                    <div class="project-features">
+                        <div class="feature">
+                            <span class="feature-icon">&#128279;</span>
+                            <div>
+                                <strong>URL 단축</strong>
+                                <p>Base62 인코딩 기반 short code 생성</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">&#127919;</span>
+                            <div>
+                                <strong>Redis 캐시</strong>
+                                <p>리다이렉트 캐싱으로 응답 속도 최적화</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">&#128200;</span>
+                            <div>
+                                <strong>부하 테스트</strong>
+                                <p>Artillery 기반 성능 병목 분석 및 최적화</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">&#128196;</span>
+                            <div>
+                                <strong>API 문서화</strong>
+                                <p>Swagger OpenAPI 3.0 자동 문서 생성</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="project-tech">
                         <span>TypeScript</span>
                         <span>Express</span>
@@ -365,8 +494,37 @@
                     <p class="project-desc">
                         이벤트 보상 지급 시스템을 인증 서버, 이벤트 서버, API 게이트웨이로 분리하여
                         마이크로서비스 아키텍처로 설계한 프로젝트.
-                        JWT 기반 역할별 권한 제어(RBAC), 보상 중복 요청 방지, E2E 테스트 자동화를 구현.
                     </p>
+                    <div class="project-features">
+                        <div class="feature">
+                            <span class="feature-icon">&#127959;</span>
+                            <div>
+                                <strong>MSA 구조</strong>
+                                <p>Auth / Event / Gateway 서버 분리 설계</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">&#128101;</span>
+                            <div>
+                                <strong>RBAC 권한</strong>
+                                <p>USER, ADMIN, OPERATOR, AUDITOR 역할 제어</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">&#128722;</span>
+                            <div>
+                                <strong>중복 방지</strong>
+                                <p>보상 요청 이력 검사로 중복 지급 차단</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">&#9989;</span>
+                            <div>
+                                <strong>E2E 테스트</strong>
+                                <p>이벤트→보상→요청 전체 흐름 자동 테스트</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="project-tech">
                         <span>NestJS</span>
                         <span>TypeScript</span>
