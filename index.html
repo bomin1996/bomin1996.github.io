@@ -257,28 +257,43 @@
                     <p class="project-desc">
                         리셀 상품 시세 추적 및 파트너 관리 플랫폼 API.
                         파트너 등록/승인, 상품 시세 실시간 추적, AI 기반 시세 트렌드 분석,
-                        비동기 배치 처리까지 커머스 백엔드의 핵심 기능을 구현한 프로젝트.
+                        비동기 배치 처리까지 커머스 백엔드의 핵심 기능을 구현하고,
+                        보안 강화 및 운영 안정성까지 고려한 프로젝트.
                     </p>
                     <div class="project-features">
                         <div class="feature">
                             <span class="feature-icon">&#9881;</span>
                             <div>
                                 <strong>파트너 센터 API</strong>
-                                <p>JWT 인증, API Key 발급, 등급별 권한 관리</p>
+                                <p>JWT + Refresh Token 인증, API Key 발급(마스킹 처리), 등급별 권한 관리</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">&#128274;</span>
+                            <div>
+                                <strong>보안 강화</strong>
+                                <p>CORS 제한, Rate Limiting, 로그인 시도 차단, 타이밍 공격 방지, 토큰 블랙리스트</p>
                             </div>
                         </div>
                         <div class="feature">
                             <span class="feature-icon">&#9733;</span>
                             <div>
                                 <strong>AI 시세 분석</strong>
-                                <p>OpenAI API 연동 시세 트렌드 분석 및 가격 전략 추천</p>
+                                <p>OpenAI API 연동 트렌드 분석, Redis 캐싱으로 비용 최적화, 장애 시 fallback 처리</p>
                             </div>
                         </div>
                         <div class="feature">
                             <span class="feature-icon">&#8635;</span>
                             <div>
                                 <strong>비동기 배치</strong>
-                                <p>Celery + Redis 기반 시세 수집, 일간 리포트 자동화</p>
+                                <p>Celery + Redis 시세 수집, Provider 패턴으로 데이터 소스 추상화, 알림 중복 방지</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">&#9989;</span>
+                            <div>
+                                <strong>테스트 & 품질</strong>
+                                <p>47개 테스트 케이스, 구조화된 로깅, 글로벌 에러 핸들링, Admin 감사 로그</p>
                             </div>
                         </div>
                         <div class="feature">
@@ -298,6 +313,7 @@
                         <span>SQLAlchemy</span>
                         <span>OpenAI API</span>
                         <span>pytest</span>
+                        <span>slowapi</span>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/bomin1996/sneakervault" class="btn btn-sm" target="_blank" rel="noopener">
