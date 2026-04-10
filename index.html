@@ -327,14 +327,15 @@
                     <p class="project-desc">
                         동시성 제어와 멱등성을 고려한 커머스 백엔드 API.
                         단순 CRUD를 넘어, 실제 서비스에서 발생하는 재고 race condition과
-                        중복 결제 문제를 어떻게 해결하는지에 초점을 맞춘 프로젝트.
+                        중복 결제 문제를 해결하고, 체계적인 에러 처리와 검증 미들웨어로
+                        프로덕션 수준의 코드 품질을 갖춘 프로젝트.
                     </p>
                     <div class="project-features">
                         <div class="feature">
                             <span class="feature-icon">&#128274;</span>
                             <div>
                                 <strong>낙관적 락</strong>
-                                <p>version 컬럼 기반 재고 동시성 제어로 overselling 방지</p>
+                                <p>version 컬럼 기반 재고 동시성 제어로 overselling 방지, 최대 3회 자동 재시도</p>
                             </div>
                         </div>
                         <div class="feature">
@@ -352,10 +353,24 @@
                             </div>
                         </div>
                         <div class="feature">
+                            <span class="feature-icon">&#128736;</span>
+                            <div>
+                                <strong>에러 처리 체계</strong>
+                                <p>커스텀 에러 클래스 + 글로벌 에러 핸들러 + 검증 미들웨어로 계층별 책임 분리</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">&#128269;</span>
+                            <div>
+                                <strong>검색 / 필터링</strong>
+                                <p>키워드 검색, 가격 범위 필터, 페이지네이션 지원</p>
+                            </div>
+                        </div>
+                        <div class="feature">
                             <span class="feature-icon">&#9889;</span>
                             <div>
                                 <strong>테스트 자동화</strong>
-                                <p>Jest + Supertest 통합 테스트, GitHub Actions CI</p>
+                                <p>단위 테스트 + 통합 테스트 (Jest + Supertest), GitHub Actions CI</p>
                             </div>
                         </div>
                     </div>
